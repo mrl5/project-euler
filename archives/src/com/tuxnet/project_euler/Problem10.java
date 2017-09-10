@@ -10,17 +10,40 @@ Find the sum of all the primes below two million.
 
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Problem10 {
-    /* TODO:
-    Way 1:
-    1) Create method which finds prime numbers
-    2) Create ArrayList with primes below two million using brand new prime number method
+    // TODO: solve Riemann hypothesis (#GoodJokeIsNotBad)
 
-    Way 2:
-    1) Google for all primes below two million and save them in csv/txt file
-    2) Create ArrayList with primes from csv/txt
+    public static void solve() {
+        double result = 0;
+        int range = 2 * (int) Math.pow(10.0, 6.0);
+        List<Integer> primes = findPrimes(range);
 
-    Then: Sum the numbers from ArrayList
-    BTW: solve Riemann hypothesis (#goodjokeisnotbad)
-     */
+        for (int prime : primes) {
+            result += prime;
+        }
+        //System.out.println(primes);
+        System.out.println(result);
+    }
+
+    private static List<Integer> findPrimes(int range) {
+        List<Integer> primes = new ArrayList<>();
+        boolean flag = false; //prime flag
+
+        for (int i = 2; i < range; i++) {
+            //start from 2 (1 is not a prime)
+            for (int j = 1; j < i; j++) {
+                flag = true;
+                if (i % j == 0 && j != 1 && j != i) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) primes.add(i);
+        }
+
+        return primes;
+    }
 }
