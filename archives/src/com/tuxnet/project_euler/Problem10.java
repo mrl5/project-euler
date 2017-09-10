@@ -21,5 +21,6 @@ public class Problem10 {
     2) Create ArrayList with primes from csv/txt
 
     Then: Sum the numbers from ArrayList
+    BTW: solve Riemann hypothesis (#goodjokeisnotbad)
      */
 }
