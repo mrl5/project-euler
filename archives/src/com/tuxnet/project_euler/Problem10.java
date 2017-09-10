@@ -43,7 +43,6 @@ public class Problem10 {
             }
             if (flag) primes.add(i);
         }
-
         return primes;
     }
 }
