@@ -13,5 +13,9 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
  */
 
 public class Problem2 {
-    //TODO
+    /* TODO:
+    1) ArrayList1 with Fibonacci numbers from range <1,4*10^6>
+    2) ArrayList2 with even-valued numbers from ArrayList1
+    3) Sum of numbers from ArrayList2
+     */
 }

@@ -15,5 +15,5 @@ Find the product abc.
  */
 
 public class Problem9 {
-    //TODO
+    //TODO: think about solution
 }

@@ -11,5 +11,5 @@ How many such routes are there through a 20×20 grid?
  */
 
 public class Problem15 {
-    //TODO
+    //TODO: do some reaserch about Combinatorics/permutations?
 }

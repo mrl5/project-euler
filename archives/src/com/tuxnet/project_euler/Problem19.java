@@ -19,5 +19,5 @@ How many Sundays fell on the first of the month during the twentieth century (1 
      */
 
 public class Problem19 {
-    //TODO
+    //TODO: some nice algoritms
 }
