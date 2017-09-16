@@ -24,7 +24,7 @@ public class Problem10 {
         for (int prime : primes) {
             result += prime;
         }
-        System.out.println(primes);
+        //System.out.println(primes);
         System.out.println(result);
     }
 
