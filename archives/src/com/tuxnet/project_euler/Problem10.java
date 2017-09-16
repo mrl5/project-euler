@@ -24,7 +24,7 @@ public class Problem10 {
         for (int prime : primes) {
             result += prime;
         }
-        //System.out.println(primes);
+        System.out.println(primes);
         System.out.println(result);
     }
 
@@ -32,11 +32,14 @@ public class Problem10 {
         List<Integer> primes = new ArrayList<>();
         boolean flag = false; //prime flag
 
-        for (int i = 2; i < range; i++) {
-            //start from 2 (1 is not a prime)
-            for (int j = 1; j < i; j++) {
-                flag = true;
-                if (i % j == 0 && j != 1 && j != i) {
+        //2 is first prime
+        primes.add(2);
+
+        for (int i = 3; i < range; i++) {
+            //start from 3
+            flag = true;
+            for (int j = 3; j < i; j++) {
+                if (i % 2 == 0 || i % j == 0) {
                     flag = false;
                     break;
                 }
