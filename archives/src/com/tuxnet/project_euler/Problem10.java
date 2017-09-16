@@ -25,7 +25,7 @@ public class Problem10 {
             result += prime;
         }
         //System.out.println(primes);
-        System.out.println(result);
+        System.out.println("The sum of all the primes below two million equals: " + result);
     }
 
     private static List<Integer> findPrimes(int range) {
