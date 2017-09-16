@@ -16,11 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Problem2 {
-    /* TODO:
-    1) ArrayList1 with Fibonacci numbers from range <1,4*10^6>
-    2) ArrayList2 with even-valued numbers from ArrayList1
-    3) Sum of numbers from ArrayList2
-     */
+
     public static void solve() {
         int result = 0;
         int range = 4 * 1000000;
