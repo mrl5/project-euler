@@ -31,4 +31,9 @@ What is the index of the first term in the Fibonacci sequence to contain 1000 di
 
 public class Problem25 {
     //TODO
+    private static Fibonacci fibonacciNumbers = new Fibonacci();
+    public static void solve() {
+        int digits = 1000;
+        System.out.println("The index of the first term in the Fibonacci sequence to contain " + digits + " digits is: " + (fibonacciNumbers.maxDigits(digits).size() -1));
+    }
 }
