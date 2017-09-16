@@ -36,8 +36,7 @@ public class Fibonacci {
                     fibonacci.get(fibonacci.size() - 1) + fibonacci.get(fibonacci.size() - 2)
             );
         }
-
-        System.out.println(fibonacci);
+        //System.out.println(fibonacci);
         return fibonacci;
     }
 }
