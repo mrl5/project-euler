@@ -12,10 +12,55 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
  */
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Problem2 {
     /* TODO:
     1) ArrayList1 with Fibonacci numbers from range <1,4*10^6>
     2) ArrayList2 with even-valued numbers from ArrayList1
     3) Sum of numbers from ArrayList2
      */
+    public static void solve() {
+        int result = 0;
+        int range = 4 * 1000000;
+        List<Integer> list = getEven(fibonacciNumbers(range));
+
+        for (int evenFibonacci : list) {
+            result += evenFibonacci;
+        }
+
+        System.out.println("The sum of the even-valued terms in the Fibonacci sequence in range " + range + " equals: " + result);
+    }
+
+    private static List<Integer> fibonacciNumbers(int range) {
+        List<Integer> fibonacci = new ArrayList<>();
+        //https://en.wikipedia.org/wiki/Fibonacci_number
+        //fibonacci.add(0);
+        //fibonacci.add(1);
+
+        //Problem description says that the sequence starts with 1, 2 ...
+        fibonacci.add(1);
+        fibonacci.add(2);
+
+        while (fibonacci.get(fibonacci.size() - 1) < range) {
+            fibonacci.add(
+                    fibonacci.get(fibonacci.size() - 1) + fibonacci.get(fibonacci.size() - 2)
+            );
+        }
+
+        if (fibonacci.get(fibonacci.size() - 1) > range) fibonacci.remove(fibonacci.size() - 1);
+        //System.out.println(fibonacci);
+        return fibonacci;
+    }
+
+    private static List<Integer> getEven(List<Integer> list) {
+        List<Integer> evenNumbers = new ArrayList<>();
+
+        for (int number : list) {
+            if (number % 2 == 0) evenNumbers.add(number);
+        }
+        //System.out.println(evenNumbers);
+        return evenNumbers;
+    }
 }
