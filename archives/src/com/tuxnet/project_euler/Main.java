@@ -7,7 +7,7 @@ public class Main {
         //Problem2.solve();
         //Problem25.solve();
         //Problem15.solve();
-        Problem19.solve();
-        
+        //Problem19.solve();
+        Problem9.solve();
     }
 }
