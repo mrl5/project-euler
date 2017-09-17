@@ -15,5 +15,27 @@ Find the product abc.
  */
 
 public class Problem9 {
-    //TODO: think about solution
+    //brute force solution
+    //for mathematical solution go here: http://www.mathblog.dk/pythagorean-triplets/
+
+    public static void solve() {
+        int a = 0, b = 0, c = 0;
+        int s = 1000;
+        boolean triplet = false;
+
+        //a<b<s/2 -> OK
+        //a<s/3 -> (1<2<3)?
+        for (a = 1; a < s / 3; a++) {
+            for (b = a; b < s / 2; b++) {
+                c = s - b - a;
+                if (c * c == a * a + b * b) {
+                    triplet = true;
+                    break;
+                }
+            }
+            if (triplet) break;
+        }
+        System.out.println("a = " + a + ";b = " + b + ";c = " + c);
+        System.out.println("abc = " + a * b * c);
+    }
 }
